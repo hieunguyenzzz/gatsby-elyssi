@@ -16,10 +16,14 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "@glidejs/glide": "^3.4.1"
   },
   "devDependencies": {
-    "prettier": "2.1.2"
+    "prettier": "2.1.2",
+    "@tailwindcss/custom-forms": "^0.2.1",
+    "tailwindcss": "^1.9.6",
+    "tailwindcss-gradients": "^3.0.0"
   },
   "keywords": [
     "gatsby"
@@ -32,7 +36,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> doc\" && exit 1"
   },
   "repository": {
     "type": "git",

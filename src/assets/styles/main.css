@@ -1,0 +1,256 @@
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+
+/*
+* === Default Overrides ===
+*/
+
+html {
+    @apply font-hkmedium antialiased;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+[class*="transition-"] {
+    @apply duration-300;
+}
+
+/*
+* === Tabs ===
+*/
+
+.tab-item.active {
+    @apply bg-grey-light border-primary;
+}
+
+.tab-pane {
+    @apply absolute top-0 opacity-0 pointer-events-none z-0 w-full;
+
+    &.active {
+        @apply relative opacity-100 pointer-events-auto z-10;
+    }
+}
+
+/*
+* === Custom Classes ===
+*/
+
+.iframe-container {
+    padding-top: 45%;
+}
+
+.item-height {
+    @apply max-h-0;
+
+    &.active {
+        @apply max-h-infinite;
+    }
+}
+
+/*
+* === Components ===
+*/
+
+.btn {
+    @apply transition-all duration-300 px-8 py-4 inline-block rounded font-hksemibold uppercase tracking-wide text-center;
+
+    &:focus {
+        @apply outline-none;
+    }
+}
+
+.btn-primary {
+    @apply text-white bg-primary;
+
+    &:hover {
+        @apply bg-primary-light;
+    }
+}
+
+.btn-outline {
+    @apply bg-white text-primary border border-primary;
+
+    &:hover {
+        @apply bg-primary text-white;
+    }
+}
+
+.btn-lg {
+    @apply .text-xl;
+}
+
+.btn-sm {
+    @apply text-sm;
+}
+
+/*
+* === Third Party Override ===
+*/
+
+.glide__bullet--active {
+    @apply bg-primary;
+}
+
+.glide--swipeable {
+    cursor: default !important;
+}
+
+#instafeed {
+    @apply flex flex-wrap justify-center relative;
+}
+
+/*
+* === Content Styleguide ===
+*/
+
+.content {
+    @apply text-secondary;
+
+    >*+* {
+        @apply mt-6;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-butlerregular leading-tight;
+    }
+
+    h1 {
+        @apply text-2xl;
+
+        @screen sm {
+            @apply text-3xl;
+        }
+
+        @screen md {
+            @apply text-7xl;
+        }
+    }
+
+    h2 {
+        @apply text-xl;
+
+        @screen sm {
+            @apply text-2xl;
+        }
+
+        @screen md {
+            @apply text-3xl;
+        }
+    }
+
+    h3 {
+        @apply text-lg;
+
+        @screen sm {
+            @apply text-xl;
+        }
+
+        @screen md {
+            @apply text-2xl;
+        }
+    }
+
+    h4,
+    h5,
+    h6 {
+        @apply text-base;
+
+        @screen sm {
+            @apply text-lg;
+        }
+
+        @screen md {
+            @apply text-xl;
+        }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        strong {
+            @apply font-butlerbold;
+        }
+    }
+
+    a {
+        @apply text-primary;
+    }
+
+    em {
+        @apply italic;
+    }
+
+    p {
+        @apply font-hkregular text-base leading-relaxed;
+
+        strong {
+            @apply font-hkbold;
+        }
+    }
+
+    li,
+    p {
+        @apply font-hkregular text-base;
+    }
+
+    li {
+        @apply leading-loose;
+    }
+
+    ul {
+        @apply pl-4 list-disc;
+
+        ul {
+            @apply list-circle;
+
+            ul {
+                @apply list-square;
+            }
+        }
+    }
+
+    ol {
+        @apply pl-4 list-decimal;
+
+        ol {
+            @apply list-latin;
+
+            ol {
+                @apply list-roman;
+            }
+        }
+    }
+
+    blockquote {
+        @apply border-l-4 border-primary px-6 py-4 bg-primary-lightest italic text-lg;
+    }
+
+    table {
+        @apply table border-collapse table-auto border border-grey-darker;
+
+        th {
+            @apply border-r border-b border-secondary-lighter bg-secondary-lighter px-3 py-2 text-white;
+        }
+
+        td {
+            @apply border-r border-b border-grey-darker px-3 py-2;
+        }
+    }
+}
+
+/* purgecss end ignore */
+
+@tailwind utilities;
