@@ -17,6 +17,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
+    "gatsby-source-graphql": "^2.6.2",
     "@glidejs/glide": "^3.4.1"
   },
   "devDependencies": {
